@@ -5,6 +5,7 @@ import cors from 'cors';
 import dummyData from './api/data.js';
 import productRoutes from './api/routes/productRoutes.js';
 import userRoutes from './api/routes/userRoutes.js';
+import paymentRoutes from './api/routes/paymentRoutes.js';
 
 
 mongoose.connect(process.env.MONGO_URI)
@@ -37,6 +38,7 @@ app.get('/api/data/', (req, res) => {
 // All product routes handled here
 app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/payment', paymentRoutes);
 
 
 // Now use that variable in both places

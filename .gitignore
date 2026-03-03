@@ -19,4 +19,4 @@ echo "Backend/.env" >> .gitignore
 echo ".env" >> .gitignore
 git add .gitignore
 git commit -m "Remove .env and add to gitignore"Backend/.env
-.env
+# .env
